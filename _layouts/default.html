@@ -6,6 +6,10 @@
 
 
   <body>
-    {% include head.html %}
+    
+{{ site.posts }}
+{% for post in site.posts %}
+{{ post.title }}
+{% endfor %}
   </body>
 </html>
