@@ -28,8 +28,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Setup Pages | Настройка страниц
+        id: pages
+        uses: actions/configure-pages@v1
       - name: Build site | Создание сайта
         uses: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
       - name: Upload artifact
