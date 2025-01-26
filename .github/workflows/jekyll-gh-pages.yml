@@ -33,8 +33,12 @@ jobs:
         uses: actions/configure-pages@v1
       - name: Build site | Создание сайта
         uses: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        env:
+          JEKYLL_ENV: "production"
+      - name: Upload site artifact | Загрузка осколков
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "_site${{ steps.pages.outputs.base_path }}"
 
   # Deployment job
   deploy:
