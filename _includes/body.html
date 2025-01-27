@@ -2,7 +2,7 @@
     <h1>Models</h1>
     <div id="grid">
         {% for post in site.posts %}
-        <a class="card">
+        <a class="card" href="{{ post.file }}">
             <img src="{{ post.image }}" />
             <div class="container">
                 <h4><b>{{ post.title }}</b></h4>
