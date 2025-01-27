@@ -1,3 +1,14 @@
-{% for post in site.posts %}
-{{ post.title }} - {{ post.date }}</br>
-{% endfor %}
+<div class="content-wrapper">
+    <h1>Models</h1>
+    <div id="grid">
+        {% for post in site.posts %}
+        <div class="card">
+            <img src="{{ post.image }}" />
+            <div class="container">
+                <h4><b>{{ post.title }}</b></h4>
+                <p>{{ post.date }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

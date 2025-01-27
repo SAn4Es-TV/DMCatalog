@@ -1,11 +1,176 @@
-
 <!DOCTYPE HTML>
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #FFFDD0;
+      color: black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-  <body>
-{% include body.html %}
-  </body>
+    nav {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 35px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: .2em 2em;
+      float: right;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0;
+      padding: .2em .7em;
+    }
+
+    nav a {
+      width: 100%;
+      height: 100%;
+      color: white;
+      text-decoration: none;
+      font-family: Ubuntu;
+      font-size: 1.15em;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      transition: .25s ease-in-out;
+    }
+
+    nav a:hover {
+      color: rgb(220, 120, 0);
+    }
+
+    .nav-bg {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -100%;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgb(50, 50, 50);
+      transition: .45s ease-in-out;
+      top: 0;
+      opacity: 1;
+    }
+
+    h1 {
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background: rgb(50, 50, 50);
+
+      background-size: 130%;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      padding: .3em;
+      font-size: 3em;
+      font-weight: lighter;
+    }
+
+    .content-wrapper {
+      width: 80%;
+      height: 3000px;
+      padding: 1em 10%;
+    }
+
+    .content-wrapper h1 {
+      margin: 0;
+      color: rgb(220, 120, 0);
+    }
+
+    #grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      border-radius: 5px;
+      width: 150pt;
+      height: 225pt;
+      overflow: hidden;
+      background: #fff;
+      margin-right: min(15px);
+      margin-top: min(25px);
+      /* 5px rounded corners */
+    }
+
+    /* Add rounded corners to the top left and the top right corner of the image */
+    .card img {
+      border-radius: 5px 5px 0 0;
+      width: -webkit-fill-available;
+      height: 75%;
+      object-fit: cover;
+      scale: 1;
+      transition: 0.3s;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover img {
+      scale: 1.2;
+    }
+
+    /* Add some padding inside the card container */
+    .container {
+      padding: 2px 16px;
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      margin-top: -5px;
+    }
+
+    .container h4 {
+      margin: 0;
+    }
+  </style>
+</head>
+
+
+<body>
+  <nav>
+    <div class="nav-bg"></div>
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">GitHub</a></li>
+    </ul>
+  </nav>
+  <div class="hero">
+    <h1>Desktop Mate Custom models</h1>
+  </div>
+  {% include body.html %}
+</body>
+
 </html>
