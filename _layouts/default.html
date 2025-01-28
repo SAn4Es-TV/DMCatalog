@@ -6,13 +6,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Desktop Mate Models</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       background: #FFFDD0;
-      color: black;
+      color: #0d1b2a;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -43,15 +43,15 @@
       height: 100%;
       color: white;
       text-decoration: none;
-      font-family: Ubuntu;
       font-size: 1.15em;
       font-weight: lighter;
       letter-spacing: 1px;
       transition: .25s ease-in-out;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     nav a:hover {
-      color: rgb(220, 120, 0);
+      color: #778da9;
     }
 
     .nav-bg {
@@ -62,7 +62,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgb(50, 50, 50);
+      background: #0d1b2a;
       transition: .45s ease-in-out;
       top: 0;
       opacity: 1;
@@ -77,11 +77,11 @@
       position: relative;
       width: 100%;
       height: 500px;
-      background: rgb(50, 50, 50);
+      background: #1b263b;
 
       background-size: 130%;
       overflow: hidden;
-      color: white;
+      color: #778da9;
       font-weight: 700;
     }
 
@@ -92,7 +92,7 @@
       width: 100%;
       padding: .3em;
       font-size: 3em;
-      font-weight: lighter;
+      font-weight: 700;
     }
 
     .content-wrapper {
@@ -158,6 +158,13 @@
     .container h4 {
       margin: 0;
     }
+
+    .l {
+      margin-top: 40px !important;
+      text-align: left;
+      border-bottom: #0d1b2a 1px solid;
+      color: #0d1b2a !important;
+    }
   </style>
 </head>
 
@@ -168,13 +175,34 @@
     <ul>
       <li><a href="">Home</a></li>
       <li><a href="">About</a></li>
-      <li><a href="">GitHub</a></li>
+      <li><a href="https://github.com/SAn4Es-TV/DMCatalog">GitHub</a></li>
     </ul>
   </nav>
   <div class="hero">
     <h1>Desktop Mate Custom models</h1>
   </div>
   {% include body.html %}
+  <h1 class="l">How to install</h1>
+  <ol>
+    <li>Install the latest <a
+        href="https://github.com/LavaGang/MelonLoader/releases/download/v0.6.6/MelonLoader.Installer.exe">MelonLoader</a>
+      version to DesktopMate (v0.6.6 is the recommended one)</li>
+    <li>Install .NET Runtime 6.0 from <a
+        href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.36-windows-x64-installer">Microsoft</a>
+    </li>
+    <li>Download <a
+        href="https://github.com/YusufOzmen01/desktopmate-custom-avatar-loader/releases/latest/download/CustomAvatarLoader.zip">Custom
+        Avatar Loader</a></li>
+    <li>Extract the contents in the Desktop Mate folder</li>
+  </ol>
+  <h1 class="l">Usage</h1>
+  <ol>
+    <li>Initial startup of Desktop Mate will take a while as IL2CPP needs to decompile the game binary</li>
+    <li>After that, click on your character and press F4</li>
+    <li>A file dialog will open. Choose any VRM file that you want (make sure it's in a folder that you have
+      permission)</li>
+    <li>And your model should immediately appear!</li>
+  </ol>
 </body>
 
 </html>
